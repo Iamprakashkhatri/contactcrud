@@ -17,9 +17,11 @@
 <td>{{ contact.address }}</td>
 <td>{{ contact.phone }}</td>
 <td>
-<a  href="{% url "contact:contact_detail"  contact.id  %}">details</a>
-<a  href="{% url "contact:contact_update"  contact.id  %}">edit</a>
-<a  href="{% url "contact:contact_delete"  contact.id  %}">delete</a>
+<a  href="{{ contact.get_absolute_url_detail }}">details</a>
+<a  href="{{ contact.get_absolute_url_update }}">edit</a>
+<a  href="{{ contact.get_absolute_url_delete }}">delete</a>
+
+
 </td>
 </tr>
 
